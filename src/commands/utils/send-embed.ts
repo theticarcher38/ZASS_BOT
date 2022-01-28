@@ -17,9 +17,10 @@ module.exports = {
             .setRequired(true))
         .addStringOption((option: { setName: (arg0: string) => any;}) => 
             option.setName('embed-color')
-                .setDescription('Sets the embed color')
-                .addChoice("red", "#ff0000")
-                .addChoice("blue", "#0048ba")
+                .setDescription('Enter the hex code of the desired color')
+                // .addChoice("Indian Red", "#CD5C5C")
+                // .addChoice("Light Coral", "#F08080")
+                // .addChoice("Salmon", "#FA8072")
                 .setRequired(false)),
 
     async execute(interaction: any) {
