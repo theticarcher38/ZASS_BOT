@@ -1,6 +1,7 @@
 import { SlashCommandBuilder } from "../../exports";
 import { console } from 'terminal-styling';
 const { MessageEmbed } = require('discord.js');
+const colors = require('../../assets/colors.json')
 
 
 module.exports = {
@@ -30,7 +31,7 @@ module.exports = {
             var embed = new MessageEmbed()
             .setTitle(embedTitle)
             .setDescription(embedDesc)
-            .setColor(embedColor)
+            .setColor(`${embedColor}`)
         
         try {
             await interaction.reply({ embeds: [embed] });
