@@ -7,7 +7,7 @@ const colors = require('../../assets/colors.json')
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('embed')
-        .setDescription('Sends message Embed to desired channel')
+        .setDescription('Sends message embed to desired channel')
         .addStringOption((option: { setName: (arg0: string) => any;}) => 
         option.setName('embed-title')
             .setDescription('The title for the embed')
@@ -30,6 +30,7 @@ module.exports = {
         const embedColor = interaction.options.getString('embed-color');
             var embed = new MessageEmbed()
             .setTitle(embedTitle)
+            .setAuthor(interaction.member.displayName)
             .setDescription(embedDesc)
             .setColor(`${embedColor}`)
         
