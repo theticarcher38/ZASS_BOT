@@ -1,7 +1,6 @@
 {
-    "data": {
-        "red": "#FF0000",
-        "pink": "FFC0CB"
-
-    }
+    "data": [
+        {"red": "#FF0000"},
+        {"pink": "#FFC0CB"}
+    ]
 }

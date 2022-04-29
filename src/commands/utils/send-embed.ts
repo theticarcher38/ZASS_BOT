@@ -1,8 +1,7 @@
 import { SlashCommandBuilder } from "../../exports";
 import { console } from 'terminal-styling';
 const { MessageEmbed } = require('discord.js');
-const colors = require('../../assets/colors.json')
-
+const colorFile = require('../../assets/colors.json')
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -19,19 +18,35 @@ module.exports = {
         .addStringOption((option: { setName: (arg0: string) => any;}) => 
             option.setName('embed-color')
                 .setDescription('Enter the hex code of the desired color')
-                // .addChoice("Indian Red", "#CD5C5C")
-                // .addChoice("Light Coral", "#F08080")
-                // .addChoice("Salmon", "#FA8072")
                 .setRequired(false)),
 
     async execute(interaction: any) {
+        const colors = colorFile.data
         const embedTitle = interaction.options.getString('embed-title');
         const embedDesc = interaction.options.getString('embed-description');
-        const embedColor = interaction.options.getString('embed-color');
+        var embedColor = interaction.options.getString('embed-color').toLowerCase();
+
+        for (var i = 0; i < colors.length; i++) {
+            if (embedColor = colors[i]) {
+                embedColor = colors.embedColor;
+            }
+        }
+
+        // switch (embedColor) {
+        //     case "red":
+        //         embedColor = colors.red;
+        //         break;
+        //     case "pink":
+        //         embedColor = colors.pink;
+        //         break;
+        //     default: 
+        //         var embedColor = interaction.options.getString('embed-color').toLowerCase();
+        //         break;
+        // }
             var embed = new MessageEmbed()
             .setTitle(embedTitle)
             .setDescription(embedDesc)
-            .setColor(`${embedColor}`)
+            .setColor(embedColor)
         
         try {
             await interaction.reply({ embeds: [embed] });
