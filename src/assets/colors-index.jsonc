@@ -1,0 +1,11 @@
+{
+    "color": [
+        "#800000",     // maroon
+        "#8B0000",     // dark red
+        "#A52A2A",     // brown
+        "#B22222",     // firebrick
+        "#DC143C",     // crimson
+        "#FF0000",     // red
+        "#FF6347"      // tomato
+    ]
+}

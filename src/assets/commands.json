@@ -1,0 +1,30 @@
+{
+                    "ping": {
+                        "description": "Replies with Pong!"
+                    },
+            
+                    "create-group": {
+                        "description": "Creates a user managed group"
+                    },
+            
+                    "remove-group": {
+                        "description": "removes a user managed group"
+                    },
+            
+                    "echo": {
+                        "description": "Replies with user input"
+                    },
+            
+                    "embed": {
+                        "description": "Sends message embed to desired channel"
+                    },
+            
+                    "help": {
+                        "description": "Displays help message"
+                    },
+            
+                    "server-info": {
+                        "description": "displays server info"
+                    }
+}
+            
